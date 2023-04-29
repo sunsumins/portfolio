@@ -32,10 +32,6 @@ a{
     src: url('./font/Montserrat-Medium.ttf') format('ttf');
 }
 
-@font-face {
-    font-family: montserrat-semibold;
-    src: url('./font/Montserrat-SemiBold.ttf') format('ttf');
-}
 
 @font-face {
     font-family: montserrat-semibolditalic;
@@ -48,13 +44,73 @@ a{
 
 :root {--point: #C8F31D;}
 
-.index .se01 p {
+.index .se01 {
+    width:100%;
+    margin: 0 auto;
+}
+
+.index .se01 .text-box {
+    max-width: 1095px;
+    margin:0 auto;
+    position: relative;
+    margin-top:174px;
+}
+
+.index .se01 .text-box .circle {
     color:var(--point);
+    font-family: montserrat-semibolditalic;
+    padding:0px 0px 5px 20px;
+    font-size:32px;
+}
+
+.index .se01 .text-box .circle::after {
+    content: '';
+    display: inline-block;
+    width: 24px;
+    height:24px;
+    border-radius: 50%;
+    background-color:var(--point);
+    margin-left:2px;
+}
+
+.index .se01 .text-box h1 {
+    font-family:  montserrat-medium;
+    font-weight: 600;
+    color:#fff; 
+    font-size:150px;
+    text-align: center;
+}
+
+.index .se01 .text-box .scroll {
+    width: 100%;
+    margin:0 auto;
+    margin-top:80px;
+    box-sizing: inline-block;
+    position: relative;
+    z-index: 1;
+}
+
+.index .se01 .text-box .scroll p {
+    font-family: montserrat-regular;
+    font-weight: 100;
+    color:#fff;
+    text-align: center;
 }
 
 
-.lalala{width: 100%;height: 500px;background: #fff;}
-.waves {transform: rotate(180deg); position:relative; width: 100%; height:50vh; margin-bottom:-7px;min-height:100px; max-height:150px; } 
+.index .se01 .text-box .scroll .triangle {
+    width: 0;
+    height: 0;
+    border-bottom: 30px solid transparent;
+    border-top: 20px solid var(--point);
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    margin: 0 auto;
+}
+
+
+/* .lalala{width: 100%;height: 500px;background: #181616;} */
+.waves {transform: rotate(180deg); position:absolute; width: 100%; height:50vh; margin-bottom:-7px;min-height:100px; max-height:150px; } 
 /* Animation */
 .parallax > use { animation: move-forever 5s cubic-bezier(.55,.5,.45,.5) infinite; } 
 
@@ -66,5 +122,14 @@ a{
 @media (max-width: 768px){
     .waves { height:40px; min-height:40px; } 
 }
+
+
+.wave-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-top:500px;
+  }
 
 /* index -end-  */
